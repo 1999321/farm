@@ -1,13 +1,12 @@
 # Sample Hardhat Project
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
-
-Try running some of the following tasks:
+先部署WrapEggFarm到base network,参数是eggfarm地址。
 
 ```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
+npm install
+// ts-node未安装需要安装
+// 修改diff.txt里面的难度为当前难度+2000
+后台运行：ts-node ./scripts/egg_file/main.ts -k 你的手续费地址私钥 -r egg代币接受地址 -e base network's endpoint -o 2000 -w WrapEggFarm address -c 1
+后台运行：ts-node ./scripts/egg_file/main.ts -k 你的手续费地址私钥 -r egg代币接受地址 -e base network's endpoint -o 2000 -w WrapEggFarm address -c 2
+后台运行：ts-node ./scripts/egg_file/main.ts -k 你的手续费地址私钥 -r egg代币接受地址 -e base network's endpoint -o 2000 -w WrapEggFarm address -c 3
 ```
